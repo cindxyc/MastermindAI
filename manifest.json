@@ -1,6 +1,6 @@
 {
     "name": "MastermindAI",
-    "description": "Check relevance of an online article to a given topic",
+    "description": "Check research relevance instantly",
     "version": "0.1.0",
     "manifest_version": 3,
     "permissions": [
@@ -8,11 +8,19 @@
       "scripting",
       "storage"
     ],
+    "host_permissions": ["<all_urls>"],
     "background": {
       "service_worker": "background.js"
     },
     "action": {
-      "default_popup": "default_popup.html",
+      "default_popup": "main.html",
+      "default_title": "Open MastermindAI",
       "default_icon": "images/logo.png"
-    }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
   }
