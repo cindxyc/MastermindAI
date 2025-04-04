@@ -5,6 +5,7 @@
     "manifest_version": 3,
     "permissions": [
       "activeTab",
+      "tabs",
       "scripting",
       "storage"
     ],
@@ -13,7 +14,7 @@
       "service_worker": "background.js"
     },
     "action": {
-      "default_popup": "main.html",
+      "default_popup": "popup.html",
       "default_title": "Open MastermindAI",
       "default_icon": "images/logo.png"
     },
